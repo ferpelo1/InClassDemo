@@ -66,8 +66,8 @@ void Main()
 			};
 		results.Dump();
 		
-		//get all th bills and bill items for waiters in september of 2014. get
-		//only those bills which were paid.
+		//get all th bills and bill items for waiters in september of 2014.
+		//get only those bills which were paid.
 		var result2 = from orders in Bills
 						where orders.PaidStatus &&
 						(orders.BillDate.Month == 9 && orders.BillDate.Year == 2014)
