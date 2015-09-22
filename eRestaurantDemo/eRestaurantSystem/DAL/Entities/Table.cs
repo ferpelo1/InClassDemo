@@ -15,8 +15,10 @@ namespace eRestaurantSystem.DAL.Entities
     {
         [Key]
         public int TableID { get; set; }
+        [Required, Range(1,25)]
         public byte TableNumber { get; set; } //tiny int in sql
         public bool Smoking { get; set; }
+        [Required]
         public int Capacity { get; set; }
         public bool Available { get; set; }
 
@@ -32,6 +34,12 @@ namespace eRestaurantSystem.DAL.Entities
         //However, we can stil create the virtual navigation property to accomodate this relatiosndhip.
 
         public virtual ICollection<Reservation> Reservations { get; set; }
+
+        public Table()
+        {
+            Available = true;
+            Smoking = false; //optional (false by default)
+        }
 
     }
 }
