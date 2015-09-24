@@ -29,3 +29,6 @@ namespace eRestaurantSystem.BLL
         }
     }
 }
+
+
+//remember to link the Library to website (add -> reference -> under solution)
